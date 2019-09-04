@@ -1,0 +1,24 @@
+{
+  "name": "PubsubLoadTesting",
+  "description": "A Cloud Pub/Sub load generator.",
+  "parameters": [
+    {
+      "name": "output",
+      "label": "Output Pub/Sub topic",
+      "help_text": "Fully-qualified topic name have 'dev' in project_id part, e.g.) projects/mercari-dataplatform-jp-testing/topics/test",
+      "regexes": [
+        "^projects/.+(dev)+.*/topics/.+$"
+      ]
+    },
+    {
+      "name": "msgPerSecond",
+      "label": "How many messages it generates per second, >= 20000 is recommended",
+      "help_text": "e.g.) 10000"
+    },
+    {
+      "name": "kinds",
+      "label": "kinds of message for using load test",
+      "help_text": "e.g.) 100"
+    }
+  ]
+}
